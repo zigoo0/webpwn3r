@@ -2,8 +2,10 @@ webpwn3r
 ========
 
 WebPwn3r - Web Applications Security Scanner.
+By Ebrahim Hegazy - @Zigoo0
+Thanks: @lnxg33k, @dia2diab @Aelhemily, @okamalo 
 
-In it’s Current Public Demo version, WebPwn3r got below Features:
+In it’s Current Public [Demo] version, WebPwn3r got below Features:
 
 1- Scan a URL or List of URL’s
 
