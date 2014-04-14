@@ -20,7 +20,7 @@ print ga.green+'''
         #| "WebPwn3r" Web Applications Security Scanner   [Demo]     #
         #|  By Ebrahim Hegazy - @Zigoo0                              #
         #|  This Version Supports Remote Code/Command Execution Scan #
-	      #|  Thanks @lnxg33k, @dia2diab @Aelhemily, @okamalo          #
+	#|  Thanks @lnxg33k, @dia2diab @Aelhemily, @okamalo          #
         ##############################################################
         '''+ga.end
 
