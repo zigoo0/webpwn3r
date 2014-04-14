@@ -30,7 +30,7 @@ def headers_reader(url):
 		 print ga.green+" [!] Status code: 200 OK"+ga.end
 	if opener.code == 404:
 		 print ga.red+" [!] Page was not found! Please check the URL \n"+ga.end
-		exit()
+		 exit()
 	#Host = opener.headers.get(HTTP_HEADER.HOST)
 	Server = opener.headers.get(HTTP_HEADER.SERVER)
 	# HOST will split the HostName from the URL
