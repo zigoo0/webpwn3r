@@ -34,7 +34,7 @@ def urls_or_list():
 		 urls_list = raw_input( ga.green+" [!] Enter the list file name .e.g [list.txt]: "+ga.end)
 		 open_list = open(urls_list).readlines()
 		 for line in open_list:
-			   links = line.strip()
+			 links = line.strip()
 		  	 url = links
 		  	 print ga.green+" \n [!] Now Scanning %s"%url +ga.end
 		  	 rce_func(url)
