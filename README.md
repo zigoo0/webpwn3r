@@ -9,6 +9,7 @@ Thanks: @lnxg33k, @dia2diab @Aelhemily, @okamalo
 
 
 How to use:
+
 1- python scan.py
 
 2- The tool will ask you if you want to scan URL or List of urls?
