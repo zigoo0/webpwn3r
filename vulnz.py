@@ -37,7 +37,7 @@ def main_function(url, payloads, check):
 
 # Here stands the vulnerabilities functions and detection payloads. 
 def rce_func(url):
-	  headers_reader(url)
+	headers_reader(url)
   	print ga.bold+" [!] Now Scanning for Remote Code/Command Execution "+ga.end
   	print ga.blue+" [!] Covering Linux & Windows Operating Systems "+ga.end
   	print ga.blue+" [!] Please wait ...."+ga.end
