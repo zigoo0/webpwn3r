@@ -38,3 +38,5 @@ In it’s Current Public [Demo] version, WebPwn3r got below Features:
 6- Improved Payloads to bypass Security Filters/WAF’s.
 
 7- Finger-Print the backend Technologies.
+
+More details: http://www.sec-down.com/wordpress/?p=373
