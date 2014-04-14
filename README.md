@@ -2,7 +2,9 @@ webpwn3r
 ========
 
 WebPwn3r - Web Applications Security Scanner.
+
 By Ebrahim Hegazy - @Zigoo0
+
 Thanks: @lnxg33k, @dia2diab @Aelhemily, @okamalo 
 
 
