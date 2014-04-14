@@ -38,5 +38,5 @@ def urls_or_list():
 		  	 url = links
 		  	 print ga.green+" \n [!] Now Scanning %s"%url +ga.end
 		  	 rce_func(url)
-			   xss_func(url)
+			 xss_func(url)
 urls_or_list()
