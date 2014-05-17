@@ -6,7 +6,7 @@
 import urllib
 import re
 import time
-
+from urllib import FancyURLopener
 
 class colors:
         def __init__(self):
@@ -17,6 +17,11 @@ class colors:
                 self.red = "\033[91m"
                 self.end = "\033[0m"
 ga = colors()
+
+class UserAgent(FancyURLopener):
+	version = 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0'
+
+useragent = UserAgent()
 
 class HTTP_HEADER:
     HOST = "Host"
@@ -42,4 +47,3 @@ def headers_reader(url):
 		sig = "x-powered-by"		
 		if sig in item:
 		    print ga.green+ " [!] " + str(powered).strip() + ga.end
-
