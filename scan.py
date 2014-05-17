@@ -30,7 +30,7 @@ def urls_or_list():
 	if url_or_list == "1":
 	 	 url = raw_input(" [!] Enter the URL: ")
 		 if not url.startswith("http://"):
-		     #Thanks to Nu11 for the HTTP checker.
+		     #Thanks to Nu11 for the HTTP checker
                      print ga.red+'''\n Invalid URL, Please Make Sure That The URL Starts With \"http://\" \n'''+ga.end
                      exit()
 		 if "?" in url:
