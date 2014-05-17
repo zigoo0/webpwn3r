@@ -28,6 +28,17 @@ def urls_or_list():
 	url_or_list = raw_input(" [!] Scan URL or List? [1/2]: ")
 	if url_or_list == "1":
 	 	 url = raw_input( ga.green+" [!] Enter the URL: "+ga.end)
+		 if not url.startswith("http://"):
+                     print ga.red+'''\n Invalid URL, Please Make Sure That The URL Starts With \"http://\" \n'''+ga.end
+                     exit()
+                 else:
+                     try:
+                         for params in url.split("?")[1].split("&"):
+                             params.split("=")[1]
+		     except IndexError:
+                         print ga.red+'''\n Invalid URL, Please Enter a Valid URL With Valid Params '''+ga.end
+                         print ga.blue+''' i.e http://www.site.com/page.php?key=value \n'''+ga.end
+                         exit()
 		 rce_func(url)
 		 xss_func(url)
 	if url_or_list =="2":
