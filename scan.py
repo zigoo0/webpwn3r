@@ -5,8 +5,10 @@
 # https://www.owasp.org/index.php/Cairo
 import re
 import urllib
+import urlparse
 from headers import *
 from vulnz import *
+
 
 print ga.green+'''
 	    __          __  _     _____                 ____       
@@ -28,8 +30,13 @@ def urls_or_list():
 	url_or_list = raw_input(" [!] Scan URL or List? [1/2]: ")
 	if url_or_list == "1":
 	 	 url = raw_input( ga.green+" [!] Enter the URL: "+ga.end)
-		 rce_func(url)
-		 xss_func(url)
+		 parts = urlparse.urlsplit(url)
+		 if not parts.scheme or not parts.netloc:
+		    # If invalid URL, exit!
+		    exit(0)
+		 else:
+		    rce_func(url)
+		    xss_func(url)
 	if url_or_list =="2":
 		 urls_list = raw_input( ga.green+" [!] Enter the list file name .e.g [list.txt]: "+ga.end)
 		 open_list = open(urls_list).readlines()
@@ -37,6 +44,11 @@ def urls_or_list():
 			 links = line.strip()
 		  	 url = links
 		  	 print ga.green+" \n [!] Now Scanning %s"%url +ga.end
-		  	 rce_func(url)
-			 xss_func(url)
+			 parts = urlparse.urlsplit(url)
+			 if not parts.scheme or not parts.netloc:
+			    ## If invalid URL, go next!
+			    pass
+			 else:
+			    rce_func(url)
+			    xss_func(url)
 urls_or_list()
