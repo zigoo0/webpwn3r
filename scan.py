@@ -3,6 +3,10 @@
 # By Ebrahim Hegazy - twitter.com/zigoo0
 # First demo conducted 12Apr-2014 @OWASP Chapter Egypt
 # https://www.owasp.org/index.php/Cairo
+try:
+	import readline
+except ImportError:
+	pass
 import re
 import urllib
 from headers import *
