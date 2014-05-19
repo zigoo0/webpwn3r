@@ -17,9 +17,10 @@ print ga.green+'''
  	        \/  \/ \___|_.__/|_|      \_/\_/ |_| |_|____/|_|   
                                                     
         ##############################################################
-        #| "WebPwn3r" Web Applications Security Scanner   [Demo]     #
+        #| "WebPwn3r" Web Applications Security Scanner              #
         #|  By Ebrahim Hegazy - @Zigoo0                              #
         #|  This Version Supports Remote Code/Command Execution, XSS #
+        #|  And SQL Injection.                                       #
 	#|  Thanks @lnxg33k, @dia2diab @Aelhemily, @okamalo          #
 	#|  More Details: http://www.sec-down.com/wordpress/?p=373   #
         ##############################################################
