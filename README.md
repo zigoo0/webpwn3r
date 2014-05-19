@@ -35,12 +35,14 @@ In it’s Current Public [Demo] version, WebPwn3r got below Features:
 
 3- ~ ~ ~ Remote Command  Execution Vulnerabilities.
 
-4- ~ ~ ~ Typical XSS Vulnerabilities.
+4- ~ ~ ~ SQL Injection Vulnerabilities.
 
-5- Detect WebKnight WAF.
+5- ~ ~ ~ Typical XSS Vulnerabilities.
 
-6- Improved Payloads to bypass Security Filters/WAF’s.
+6- Detect WebKnight WAF.
 
-7- Finger-Print the backend Technologies.
+7- Improved Payloads to bypass Security Filters/WAF’s.
+
+8- Finger-Print the backend Technologies.
 
 More details: http://www.sec-down.com/wordpress/?p=373
