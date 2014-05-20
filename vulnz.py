@@ -10,8 +10,8 @@ from headers import *
 #updates:
 # 1- Fixed the empty parameters issue => Done.
 # 2- User agents when sending a Request => Done.
-# 3- Will try to add XSS Injection in Cookies, Refere and UserAgent
-#
+# 3- Added Error Based SQLI Detection Support => Done.
+# 4- Will try to add XSS Injection in Cookies, Refere and UserAgent
 
 def main_function(url, payloads, check):
         #This function is going to split the url and try the paylods instead of every parameter value.
