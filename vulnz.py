@@ -14,7 +14,7 @@ from headers import *
 # 4- Will try to add XSS Injection in Cookies, Refere and UserAgent
 
 def main_function(url, payloads, check):
-        #This function is going to split the url and try the paylods instead of every parameter value.
+        #This function is going to split the url and try the append paylods in every parameter value.
         opener = urllib.urlopen(url)
 	vuln = 0
         if opener.code == 999:
