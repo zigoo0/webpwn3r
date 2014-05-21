@@ -30,10 +30,10 @@ def urls_or_list():
 	url_or_list = raw_input(" [!] Scan URL or List of URLs? [1/2]: ")
 	if url_or_list == "1":
 	 	 url = raw_input(" [!] Enter the URL: ")
-		 if not url.startswith("http://"):
+		 #if not url.startswith("http://"):
 		     #Thanks to Nu11 for the HTTP checker
-                     print ga.red+'''\n Invalid URL, Please Make Sure That The URL Starts With \"http://\" \n'''+ga.end
-                     exit()
+                     #print ga.red+'''\n Invalid URL, Please Make Sure That The URL Starts With \"http://\" \n'''+ga.end
+                     #exit()
 		 if "?" in url:
 		 	rce_func(url)
 		 	xss_func(url)
