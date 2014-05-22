@@ -11,7 +11,7 @@ import re
 import urllib
 from headers import *
 from vulnz import *
-
+import re
 print ga.green+'''
 	    __          __  _     _____                 ____       
 	    \ \        / / | |   |  __ \               |___ \      
@@ -33,7 +33,7 @@ def urls_or_list():
 	url_or_list = raw_input(" [!] Scan URL or List of URLs? [1/2]: ")
 	if url_or_list == "1":
 	 	 url = raw_input(" [!] enter the url (e.g. http://localhost/index.php?id=1): ")
-		 while (not ("?" and "=") in url) or not url.startswith("http://"):
+		 while not re.match("^(http|https)://\S*\w+\?\S*=", url):
 		     #Thanks to Nu11 for the HTTP checker
 		     print ga.red +"\n [Warning] "+ ga.end + ga.bold+"%s"%url +ga.end + ga.red +" is not a valid URL"+ga.end			
 		     print ga.red +" [Warning] You should write a Full URL .e.g http://site.com/page.php?id=value \n"+ ga.end
