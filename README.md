@@ -27,7 +27,7 @@ same thing with the list of links.
 
 Demo Video: https://www.youtube.com/watch?v=B6kDUk-ehOE
 
-In it’s Current Public [Demo] version, WebPwn3r got below Features:
+In its Current Public [Demo] version, WebPwn3r gets below Features:
 
 1- Scan a URL or List of URL’s
 
@@ -45,4 +45,4 @@ In it’s Current Public [Demo] version, WebPwn3r got below Features:
 
 8- Finger-Print the backend Technologies.
 
-More details: http://www.sec-down.com/wordpress/?p=373
+For more details: http://www.sec-down.com/wordpress/?p=373
