@@ -1,6 +1,8 @@
 webpwn3r
 ========
 
+[This project is not maintained for years, and was written when I started learning Python. so don't expect fancy stuff :D. Also it only supports python2.7]
+
 WebPwn3r - Web Applications Security Scanner.
 
 By Ebrahim Hegazy - @Zigoo0
